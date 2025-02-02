@@ -1,0 +1,387 @@
+23:19:12.577218, 02/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001733D063CE0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+02:07:53.400854, 03/12/2024 
+	'access_token'
+
+08:09:11.233441, 03/12/2024 
+	'access_token'
+
+22:26:50.355327, 03/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002227F9F0BF0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+15:07:09.401378, 04/12/2024 
+	'access_token'
+
+02:21:44.736299, 06/12/2024 
+	'access_token'
+
+08:15:18.691834, 06/12/2024 
+	'access_token'
+
+10:00:54.738319, 06/12/2024 
+	'access_token'
+
+19:04:24.767877, 06/12/2024 
+	'access_token'
+
+00:55:55.553532, 08/12/2024 
+	'access_token'
+
+13:44:25.738620, 08/12/2024 
+	Expecting value: line 1 column 1 (char 0)
+
+00:52:48.250560, 14/12/2024 
+	'access_token'
+
+06:47:58.383754, 14/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Read timed out. (read timeout=None)
+
+15:20:16.740687, 14/12/2024 
+	('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+11:54:16.729012, 15/12/2024 
+	'access_token'
+
+02:37:39.867770, 18/12/2024 
+	'access_token'
+
+22:18:43.928172, 20/12/2024 
+	'access_token'
+
+06:56:50.242801, 21/12/2024 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+16:50:31.331804, 21/12/2024 
+	HTTPSConnectionPool(host='api.twitch.tv', port=443): Max retries exceeded with url: /helix/streams?user_login=ayanedawn (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000018747BC9760>: Failed to resolve 'api.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+02:06:14.961425, 22/12/2024 
+	('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+07:51:59.346478, 22/12/2024 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+22:23:36.061317, 22/12/2024 
+	'access_token'
+
+04:58:31.112747, 23/12/2024 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+17:08:19.418390, 23/12/2024 
+	'access_token'
+
+02:00:24.447297, 24/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000233A161F710>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+00:46:07.649914, 25/12/2024 
+	'access_token'
+
+13:42:24.162682, 25/12/2024 
+	'access_token'
+
+06:13:12.114545, 26/12/2024 
+	'access_token'
+
+06:49:16.206160, 26/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000233A161F710>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+20:08:52.138926, 26/12/2024 
+	'access_token'
+
+21:38:11.947756, 26/12/2024 
+	Expecting value: line 1 column 1 (char 0)
+
+12:55:08.440455, 30/12/2024 
+	'access_token'
+
+18:22:58.826144, 30/12/2024 
+	'access_token'
+
+10:15:28.521231, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002769E7427B0>, 'Connection to id.twitch.tv timed out. (connect timeout=None)'))
+
+10:17:43.600393, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002769E8051C0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+10:19:59.635615, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002769E805820>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+10:22:03.641217, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002769E806C60>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+10:24:07.646455, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002769E8079B0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+10:26:11.650912, 31/12/2024 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002769E820260>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+12:47:42.286527, 01/01/2025 
+	[Errno 22] Invalid argument
+
+12:49:42.292468, 01/01/2025 
+	[Errno 22] Invalid argument
+
+12:51:42.296738, 01/01/2025 
+	[Errno 22] Invalid argument
+
+12:53:42.301676, 01/01/2025 
+	[Errno 22] Invalid argument
+
+12:55:42.305461, 01/01/2025 
+	[Errno 22] Invalid argument
+
+12:57:42.309644, 01/01/2025 
+	[Errno 22] Invalid argument
+
+21:45:04.946718, 01/01/2025 
+	('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+03:57:46.446041, 02/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+14:24:15.506374, 02/01/2025 
+	'access_token'
+
+13:39:58.474930, 03/01/2025 
+	'access_token'
+
+13:56:20.345703, 03/01/2025 
+	[Errno 22] Invalid argument
+
+13:58:20.355326, 03/01/2025 
+	[Errno 22] Invalid argument
+
+14:00:20.359124, 03/01/2025 
+	[Errno 22] Invalid argument
+
+14:02:20.365228, 03/01/2025 
+	[Errno 22] Invalid argument
+
+14:04:20.369274, 03/01/2025 
+	[Errno 22] Invalid argument
+
+14:06:20.374163, 03/01/2025 
+	[Errno 22] Invalid argument
+
+21:14:43.840982, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+21:17:32.898501, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+21:20:21.963341, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+21:23:10.951381, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+21:26:00.502160, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+21:28:49.394212, 06/01/2025 
+	'charmap' codec can't encode character '\uff61' in position 133: character maps to <undefined>
+
+06:50:54.006578, 08/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001C3290EFDA0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+04:23:58.951351, 09/01/2025 
+	'access_token'
+
+03:09:35.057602, 11/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+04:15:33.590073, 11/01/2025 
+	'access_token'
+
+04:19:40.122643, 11/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+04:23:38.077045, 11/01/2025 
+	('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+06:21:43.159676, 11/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+14:09:56.361003, 11/01/2025 
+	'access_token'
+
+00:30:30.686450, 12/01/2025 
+	'access_token'
+
+06:43:25.621153, 12/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+11:57:35.468801, 12/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+13:26:38.344143, 12/01/2025 
+	('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+14:05:30.961017, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+14:07:30.964554, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+14:09:30.971303, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+14:11:30.974964, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+14:13:30.978652, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+14:15:30.981926, 12/01/2025 
+	Expecting property name enclosed in double quotes: line 25 column 1 (char 1114)
+
+05:26:22.140284, 13/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+06:34:12.518658, 13/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+09:10:11.176412, 13/01/2025 
+	'access_token'
+
+22:34:54.802336, 13/01/2025 
+	'access_token'
+
+09:32:46.147527, 15/01/2025 
+	'access_token'
+
+10:29:06.640616, 15/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+01:18:28.627309, 17/01/2025 
+	'access_token'
+
+01:25:23.135124, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C759FF8C0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+01:38:53.692790, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020C75A37770>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+
+01:40:57.701180, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C75A348C0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+01:43:12.781257, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C75A58140>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+01:45:16.787130, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C75A58A10>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+01:47:31.850850, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C7594D1C0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+01:49:35.856198, 17/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020C759FF9E0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+02:17:22.247309, 18/01/2025 
+	('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+02:19:26.252075, 18/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021ACE54BE60>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+06:52:48.104648, 18/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021AD02D1F10>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+21:32:25.885052, 20/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021ACE32B110>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+12:38:07.787205, 22/01/2025 
+	'access_token'
+
+14:04:37.079398, 23/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+23:07:34.904504, 23/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AD05E45F0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+04:00:07.380790, 24/01/2025 
+	('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+09:52:48.217448, 24/01/2025 
+	'access_token'
+
+10:30:15.434555, 24/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+10:37:58.179659, 24/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+12:05:27.911256, 24/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+23:36:31.602491, 24/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021AD03E5BB0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+23:38:35.611899, 24/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021AD05E79B0>: Failed to resolve 'id.twitch.tv' ([Errno 11001] getaddrinfo failed)"))
+
+00:14:40.962184, 25/01/2025 
+	[Errno 22] Invalid argument
+
+00:16:40.966505, 25/01/2025 
+	[Errno 22] Invalid argument
+
+00:18:40.971293, 25/01/2025 
+	[Errno 22] Invalid argument
+
+00:20:40.974800, 25/01/2025 
+	[Errno 22] Invalid argument
+
+00:22:40.979172, 25/01/2025 
+	[Errno 22] Invalid argument
+
+00:24:40.983625, 25/01/2025 
+	[Errno 22] Invalid argument
+
+22:30:25.670816, 25/01/2025 
+	[Errno 22] Invalid argument
+
+10:20:03.568834, 26/01/2025 
+	[Errno 22] Invalid argument
+
+10:22:03.573885, 26/01/2025 
+	[Errno 22] Invalid argument
+
+10:24:03.576525, 26/01/2025 
+	[Errno 22] Invalid argument
+
+10:26:03.580342, 26/01/2025 
+	[Errno 22] Invalid argument
+
+10:28:03.583355, 26/01/2025 
+	[Errno 22] Invalid argument
+
+10:30:03.587337, 26/01/2025 
+	[Errno 22] Invalid argument
+
+20:54:11.223925, 27/01/2025 
+	'access_token'
+
+23:35:35.777341, 27/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002C22AC07770>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+06:38:55.104516, 28/01/2025 
+	('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+09:40:37.669761, 29/01/2025 
+	Expecting value: line 1 column 1 (char 0)
+
+12:39:21.036962, 30/01/2025 
+	'access_token'
+
+23:42:16.815724, 30/01/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002C22B092690>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+
+23:48:23.704872, 30/01/2025 
+	('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+14:51:39.548862, 31/01/2025 
+	'access_token'
+
+03:19:07.046566, 02/02/2025 
+	HTTPSConnectionPool(host='id.twitch.tv', port=443): Max retries exceeded with url: /oauth2/token?client_id=0864f6uuxs0m7k0gbfruwauhafpvs1&client_secret=cq38r4hmdcq3uvkc0ub15un6y2gzqa&grant_type=client_credentials (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000027A058A1E20>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
+

@@ -83,20 +83,20 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                 raise Exception("Too many consecutive errors.") from e
 
 if __name__ == "__main__":
-    if (not os.path.isfile("../Hidden/data.json")):
+    if not os.path.isfile("../Hidden/data.json"):
         print("data.json not found. Please create the file with the required authorization data.")
         exit(1)
-    if (not os.path.isfile("channels.json")):
+    if not os.path.isfile("channels.json"):
         with open("channels.json", "x") as f:
             json.dump({}, f, indent=4)
         print("channels.json not found. Please add channel data. to the newly created file")
-    if (not os.path.isfile("log.txt")):
+    if not os.path.isfile("log.txt"):
         with open("log.txt", "x") as f:
             print("Log file created.")
-    if (not os.path.isfile("errors.txt")):
+    if not os.path.isfile("errors.txt"):
         with open("errors.txt", "x") as f:
             print("Errors-Log file created.")
     main("../Hidden/data.json",
-         "channels.json",
+         "V1 Framework/channels.json",
          "log.txt",
          "errors.txt")
