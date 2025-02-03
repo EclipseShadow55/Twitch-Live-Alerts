@@ -6,7 +6,3 @@ from twitchAPI.eventsub.websocket import EventSubWebsocket
 from twitchAPI.type import AuthScope
 import asyncio
 import json
-
-def edit_subs():
-    print("Editing Subscriptions...")
-    print("This is the sub list editor. You can type 'help' for a list of commands.")

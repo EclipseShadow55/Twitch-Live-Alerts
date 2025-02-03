@@ -97,6 +97,6 @@ if __name__ == "__main__":
         with open("errors.txt", "x") as f:
             print("Errors-Log file created.")
     main("../Hidden/data.json",
-         "V1 Framework/channels.json",
+         "channels.json",
          "log.txt",
          "errors.txt")
