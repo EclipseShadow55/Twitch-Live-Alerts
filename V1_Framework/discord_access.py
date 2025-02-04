@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 def send_message(webhook_url, message):
@@ -10,7 +11,8 @@ def send_message(webhook_url, message):
 
 
 def live_alerts(webhook_url, channel_name, info):
-    additional_url = "https://discord.com/api/webhooks/1306136270426214430/YIiMAGpAXmBG7ugd2lD1s300aHL_AbdDJtPi-OOkYA0zJsJgRFDIjibj6251fwIJaFd0"
+    with open("info.json", "r") as f:
+        additional_url = json.load(f)["additional_urls"]
 
     if info is not None:
         message = "\n".join([f"{info['user_name']} Is Now Live!",
