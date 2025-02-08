@@ -1,0 +1,11 @@
+{
+  "streamer1": [
+    "https://discord.com/api/v10/...webhook1",
+    "https://discord.com/api/v10/...webhook2"
+  ],
+  "streamer2": [
+    "https://discord.com/api/v10/...webhook3"
+  ],
+    "streamer3": [],
+    "streamer4": null
+}
