@@ -82,20 +82,24 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                 raise Exception("Too many consecutive errors.") from e
 
 if __name__ == "__main__":
-    if not os.path.isfile("../Hidden/data.json"):
-        print("data.json not found. Please create the file with the required authorization data.")
+    log_file = "Logs/log.txt"
+    error_file = "Logs/errors.txt"
+    channels_file = "Data/channels.json"
+    data_file = "../Hidden/data.json"
+    if not os.path.isfile(data_file):
+        print(f"{data_file} not found. Please create the file with the required authorization data.")
         exit(1)
-    if not os.path.isfile("channels.json"):
-        with open("channels.json", "x") as f:
+    if not os.path.isfile(channels_file):
+        with open(channels_file, "x") as f:
             json.dump({}, f, indent=4)
-        print("channels.json not found. Please add channel data. to the newly created file")
-    if not os.path.isfile("log.txt"):
-        with open("log.txt", "x") as f:
-            print("Log file created.")
-    if not os.path.isfile("errors.txt"):
-        with open("errors.txt", "x") as f:
-            print("Errors-Log file created.")
-    main("../Hidden/data.json",
-         "channels.json",
-         "log.txt",
-         "errors.txt")
+        print(f"{channels_file} not found. Please add channel data. to the newly created file")
+    if not os.path.isfile(log_file):
+        with open(log_file, "x") as f:
+            print(f"Log file created at {log_file}.")
+    if not os.path.isfile(error_file):
+        with open(error_file, "x") as f:
+            print(f"Errors file created at {error_file}")
+    main(data_file,
+         channels_file,
+         log_file,
+         error_file)

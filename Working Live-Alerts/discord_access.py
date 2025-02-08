@@ -12,7 +12,7 @@ def send_message(webhook_url, message, embeds):
 
 
 def live_alerts(webhook_urls, channel_name, info, test=False):
-    with open("info.json", "r") as f:
+    with open("Data/info.json", "r") as f:
         additional_urls = json.load(f)["additional_urls"]
     if info is not None:
         message = f"{info['user_name']} Is Now Live!"
