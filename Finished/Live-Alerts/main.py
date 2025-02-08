@@ -85,7 +85,7 @@ if __name__ == "__main__":
     log_file = "Logs/log.txt"
     error_file = "Logs/errors.txt"
     channels_file = "Data/channels.json"
-    data_file = "../../Hidden/data.json"
+    data_file = "../../Required/data.json"
     if not os.path.isfile(data_file):
         print(f"{data_file} not found. Please create the file with the required authorization data.")
         exit(1)
