@@ -13,8 +13,8 @@ def get_access_token(client_id, client_secret):
     return response.json()["access_token"]
 
 
-def get_stream_data(channel_name, client_id, access_token):
-    url = f"https://api.twitch.tv/helix/streams?user_login={channel_name}"
+def get_stream_data(channel_names, client_id, access_token):
+    url = f"https://api.twitch.tv/helix/streams?{"&".join([f'user_login={channel_name.lower()}' for channel_name in channel_names])}"
     headers = {
         "Client-ID": client_id,
         "Authorization": f"Bearer {access_token}"
@@ -22,9 +22,9 @@ def get_stream_data(channel_name, client_id, access_token):
     response = requests.get(url, headers=headers)
     data = response.json()
     try:
-        if data["data"]:
-            return data["data"][0]
+        if data.get("data", None) is not None:
+            return data["data"]
         else:
             return None
-    except Exception:
-        return None
+    except Exception as e:
+        return e

@@ -1,4 +1,6 @@
 """Main module for the LiveAlertDiscordBot"""
+import winotify
+
 import twitch_access as ta
 import discord_access as da
 import json
@@ -8,6 +10,13 @@ from winotify import Notification
 import os
 
 
+def get_dict_from_attr(dict_list: list[dict], attr, value):
+    """Get a dictionary from a list of dictionaries based on an attribute"""
+    for dictionary in dict_list:
+        if dictionary[attr] == value:
+            return dictionary
+    return None
+
 def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_errors: str):
     """Main function for the LiveAlertDiscordBot"""
     # Load the data and channels
@@ -15,6 +24,8 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
         data = json.load(f)
     with open(path_to_channels, "r") as f:
         channels = json.load(f)
+    with open(path_to_errors, "w") as f:
+        f.write("")
     # Create a dictionary to store the live status of each channel
     is_live = {}
     for name in channels:
@@ -32,38 +43,26 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                         is_live[name] = [False, False]
             # Check for live streams
             print(f"\n\n{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\nChecking for live streams...\n")
-            for channel_name in channels:
-                sleep(4)
-                print("Checking", channel_name)
-                access_token = ta.get_access_token(data[0], data[1])
-                info = ta.get_stream_data(channel_name,
-                                          data[0],
-                                          access_token)
-                # Check if the channel is live and send message accordingly
-                if info is not None:
-                    is_live[channel_name][0] = True
-                    #is_live[channel_name][2] = br.main(data[0], data[1], channel_name, 120, [20, 10])
+            stream_data = ta.get_stream_data(list(channels.keys()), data[0], ta.get_access_token(data[0], data[1]))
+            for channel in channels:
+                if channel.lower() in [stream["user_login"] for stream in stream_data]:
+                    if not is_live[channel][0]:
+                        is_live[channel][0] = True
+                        info = get_dict_from_attr(stream_data, "user_login", channel.lower())
+                        print(da.live_alerts(channels[channel], channel, info))
+                        winotify.Notification(title=f"{channel} Is Now Live!",
+                                              msg=f"{info["title"]}\nPlaying {info['game_name']}\nViewers:{info['viewer_count']}",
+                                              duration="long",
+                                              app_id="LiveAlertDiscordBot").show()
                 else:
-                    is_live[channel_name][0] = False
-                    #is_live[channel_name][2].stop_bot()
-                    #is_live[channel_name][2] = None
-                if is_live[channel_name][0] != is_live[channel_name][1]:
-                    message = da.live_alerts(channels[channel_name],
-                                             channel_name,
-                                             info)
-                    # Log the message
-                    with open(path_to_log, "a") as f:
-                        print(f"{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\n\t{message[0][0]}",
-                              file=f,
-                              end="\n\n")
-                    # Show a notification
-                    note = Notification(title=f"{channel_name} On Twitch",
-                                        msg=message[0],
-                                        duration="long",
-                                        launch=f"twitch.tv/{channel_name}",
-                                        app_id="LiveAlertDiscordBot")
-                    note.show()
-                    is_live[channel_name][1] = is_live[channel_name][0]
+                    if is_live[channel][0]:
+                        is_live[channel][0] = False
+                        print(da.live_alerts(channels[channel], channel, None))
+                        winotify.Notification(title=f"{channel} Is Now Offline!",
+                                              msg=f"{channel} is now offline.",
+                                              duration="long",
+                                              app_id="LiveAlertDiscordBot").show()
+            sleep(10)
             cons_errors = 0
         except Exception as e:
             # Log the error
