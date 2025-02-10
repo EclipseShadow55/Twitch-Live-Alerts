@@ -1,0 +1,7 @@
+name: Twitch-Live-Alerts
+channels:
+  - defaults
+  - requests
+  - pip
+  - pip:
+      - winotify

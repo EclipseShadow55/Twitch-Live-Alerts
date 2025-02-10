@@ -1,3 +1,5 @@
+"""Module that sends webhook messages to Discord channels."""
+
 import requests
 import json
 
