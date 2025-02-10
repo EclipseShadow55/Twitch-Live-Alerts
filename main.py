@@ -21,7 +21,7 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
     """Main function for the LiveAlertDiscordBot"""
     # Load the data and channels
     with open(path_to_data, "r") as f:
-        data = json.load(f)["Live-Alerts-Bot"]
+        data = json.load(f)
     with open(path_to_channels, "r") as f:
         channels = json.load(f)
     with open(path_to_errors, "w") as f:
