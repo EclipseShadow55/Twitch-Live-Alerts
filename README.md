@@ -4,7 +4,7 @@ Uses Twitch Endpoints API, Discord Webhooks, the Requests library, and the Winot
 ## Table of Contents
 - [Installation](#installation)
 - [Licences and Credits](#licenses-and-credits)
-## Installation
+## Installation and Usage
 ### With Python (3.6+)
 (Note: This guide assumes you are using windows, but the process should be similar on other operating systems)
 1. Create a venv or conda environment, so that the packages don't conflict with other projects. If you don't know how to do this, follow [this guide](https://python.land/virtual-environments/virtualenv) for venv or [this guide](https://www.geeksforgeeks.org/set-up-virtual-environment-for-python-using-anaconda/) for conda.
@@ -18,6 +18,14 @@ Uses Twitch Endpoints API, Discord Webhooks, the Requests library, and the Winot
 9. Navigate back into the main folder, then into the `Required` folder. 
 10. Create a file named `data.json` and following the structure of `example-data.json`, fill it with your own data. 
 11. Finally, navigate back to the main folder and run the `main.py` file using `python main.py`.
+## Moving Forward
+- Fix discord thumbnail issue
+    - Switch image hosting from unreliable Twitch thumbnail url (which doesn't seem to work well with Discord) to another program (imgbb)
+- Make it more user-friendly and accessible for non-programmers
+  - Maybe add a UI
+  - Add a release build in either exe/bin, zip/tar.gz, or msi/deb/rpm format
+  - Add an installer for the release build
+    - Maybe have it check for updates on startup
 ## Licenses and Credits
 ### Twitch API
 - [Twitch Developers](https://dev.twitch.tv/docs/api/)
