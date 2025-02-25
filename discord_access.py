@@ -2,6 +2,7 @@
 
 import requests
 import json
+import time
 
 
 def send_message(webhook_url, message, embeds):
@@ -14,6 +15,7 @@ def send_message(webhook_url, message, embeds):
 
 
 def live_alerts(webhook_urls, channel_name, info, test=False):
+    t = str(time.time()).replace(".", "")
     with open("Data/info.json", "r") as f:
         additional_urls = json.load(f).get("additional_urls", [])
     if info is not None:
@@ -33,7 +35,7 @@ def live_alerts(webhook_urls, channel_name, info, test=False):
                     }
                 ],
                 "image": {
-                    "url": info["thumbnail_url"].replace("{width}", "1920").replace("{height}", "1080")
+                    "url": info["thumbnail_url"].replace("{width}", "400").replace("{height}", "225") + "?t=" + t
                 },
             }
         ]
