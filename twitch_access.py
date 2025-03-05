@@ -21,10 +21,8 @@ def get_stream_data(channel_names, client_id, access_token):
     }
     response = requests.get(url, headers=headers)
     data = response.json()
-    try:
-        if data.get("data", None) is not None:
-            return data["data"]
-        else:
-            return None
-    except Exception as e:
-        return e
+
+    if data.get("data", None) is not None:
+        return data["data"]
+    else:
+        return data

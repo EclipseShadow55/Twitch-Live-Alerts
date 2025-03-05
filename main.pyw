@@ -32,6 +32,7 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
         is_live[name] = [False, False, None]
     cons_errors = 0
     # Main loop
+    token = ta.get_access_token(data[0], data[1])
     while True:
         try:
             # Load the channels
@@ -43,7 +44,11 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                         is_live[name] = [False, False]
             # Check for live streams
             print(f"\n\n{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\nChecking for live streams...\n")
-            stream_data = ta.get_stream_data(list(channels.keys()), data[0], ta.get_access_token(data[0], data[1]))
+            stream_data = ta.get_stream_data(list(channels.keys()), data[0], token)
+            if stream_data.get("status", None) == 401:
+                if stream_data["message"] == "Invalid OAuth token":
+                    token = ta.get_access_token(data[0], data[1])
+                    stream_data = ta.get_stream_data(list(channels.keys()), data[0], token)
             for channel in channels:
                 if channel.lower() in [stream["user_login"] for stream in stream_data]:
                     if not is_live[channel][0]:
