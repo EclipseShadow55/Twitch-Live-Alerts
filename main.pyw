@@ -1,4 +1,22 @@
+"""
+Copyright 2025 EclipseShadow55
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
 """Main module for the LiveAlertDiscordBot"""
+import sys
+
 import winotify
 
 import twitch_access as ta
@@ -6,9 +24,7 @@ import discord_access as da
 import json
 from time import sleep
 from datetime import datetime
-from winotify import Notification
 import os
-
 
 def get_dict_from_attr(dict_list: list[dict], attr, value):
     """Get a dictionary from a list of dictionaries based on an attribute"""
@@ -18,6 +34,9 @@ def get_dict_from_attr(dict_list: list[dict], attr, value):
     return None
 
 def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_errors: str):
+    ignore = "--start_ignore" in sys.argv[1:] if len(sys.argv) > 1 else False
+    no_notif = "--no_notif" in sys.argv[1:] if len(sys.argv) > 1 else False
+    no_offline = "--no_offline" in sys.argv[1:] if len(sys.argv) > 1 else False
     """Main function for the LiveAlertDiscordBot"""
     # Load the data and channels
     with open(path_to_data, "r") as f:
@@ -45,8 +64,8 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
             # Check for live streams
             print(f"\n\n{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\nChecking for live streams...\n")
             stream_data = ta.get_stream_data(list(channels.keys()), data[0], token)
-            if stream_data.get("status", None) == 401:
-                if stream_data["message"] == "Invalid OAuth token":
+            if isinstance(stream_data, dict):
+                if stream_data.get("error", "") == "Unauthorized":
                     token = ta.get_access_token(data[0], data[1])
                     stream_data = ta.get_stream_data(list(channels.keys()), data[0], token)
             for channel in channels:
@@ -54,37 +73,41 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                     if not is_live[channel][0]:
                         is_live[channel][0] = True
                         info = get_dict_from_attr(stream_data, "user_login", channel.lower())
-                        print(da.live_alerts(channels[channel], channel, info))
-                        winotify.Notification(title=f"{channel} Is Now Live!",
-                                              msg=f"{info["title"]}\nPlaying {info['game_name']}\nViewers:{info['viewer_count']}",
-                                              duration="long",
-                                              app_id="LiveAlertDiscordBot").show()
+                        if not ignore:
+                            print(da.live_alerts(channels[channel], channel, info))
+                        if not no_notif:
+                            winotify.Notification(title=f"{channel} Is Now Live!",
+                                                  msg=f"{info["title"]}\nPlaying {info['game_name']}\nViewers:{info['viewer_count']}",
+                                                  duration="long",
+                                                  app_id="LiveAlertDiscordBot").show()
                 else:
-                    if is_live[channel][0]:
-                        is_live[channel][0] = False
-                        print(da.live_alerts(channels[channel], channel, None))
-                        winotify.Notification(title=f"{channel} Is Now Offline!",
-                                              msg=f"{channel} is now offline.",
-                                              duration="long",
-                                              app_id="LiveAlertDiscordBot").show()
-            sleep(10)
+                    if not no_offline:
+                        if is_live[channel][0]:
+                            is_live[channel][0] = False
+                            print(da.live_alerts(channels[channel], channel, None))
+                            if not no_notif:
+                                winotify.Notification(title=f"{channel} Is Now Offline!",
+                                                      msg=f"{channel} is now offline.",
+                                                      duration="long",
+                                                      app_id="LiveAlertDiscordBot").show()
+            sleep(20)
             cons_errors = 0
         except Exception as e:
-            # Log the error
             with open(path_to_errors, "a") as f:
                 print(f"{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\n\t{e}",
                       file=f,
                       end="\n\n")
-            if cons_errors < 5:
+
+            if cons_errors < 10:
                 cons_errors += 1
-                sleep(120)
+                sleep(120 * 2**cons_errors)
             else:
-                note = Notification(title="LiveAlertDiscordBot Error",
+                winotify.Notification(title="LiveAlertDiscordBot Error",
                                     msg="Too many consecutive errors. Shutting down.",
                                     duration="long",
-                                    app_id="LiveAlertDiscordBot")
-                note.show()
+                                    app_id="LiveAlertDiscordBot").show()
                 raise Exception("Too many consecutive errors.") from e
+        ignore = False
 
 if __name__ == "__main__":
     log_file = "Logs/log.txt"
