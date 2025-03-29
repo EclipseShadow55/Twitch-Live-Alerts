@@ -34,9 +34,9 @@ def get_dict_from_attr(dict_list: list[dict], attr, value):
     return None
 
 def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_errors: str):
-    ignore = "--start_ignore" in sys.argv[1:] if len(sys.argv) > 1 else False
-    no_notif = "--no_notif" in sys.argv[1:] if len(sys.argv) > 1 else False
-    no_offline = "--no_offline" in sys.argv[1:] if len(sys.argv) > 1 else False
+    ignore = "--start-ignore" in sys.argv
+    no_notif = "--no-notif" in sys.argv
+    no_offline = "--no-offline" in sys.argv
     """Main function for the LiveAlertDiscordBot"""
     # Load the data and channels
     with open(path_to_data, "r") as f:
@@ -115,8 +115,7 @@ if __name__ == "__main__":
     channels_file = "Data/channels.json"
     data_file = "Required/auth.json"
     if not os.path.isfile(data_file):
-        print(f"{data_file} not found. Please create the file with the required authorization data.")
-        exit(1)
+        raise ValueError(f"{data_file} not found. Please create the file with the required authorization data.")
     if not os.path.isfile(channels_file):
         with open(channels_file, "x") as f:
             json.dump({}, f, indent=4)
