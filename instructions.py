@@ -66,7 +66,7 @@ if __name__ == "__main__":
     while i < len(stuff):
         os.system("cls")
         if i == 0:
-            if not os.path.isfile("Distros/twitch_live_alerts.py") and not os.path.isfile("twitch_live_alerts.exe"):
+            if not os.path.isfile("twitch_live_alerts.py") and not os.path.isfile("twitch_live_alerts.exe"):
                 print(stuff[0])
                 inp = input(f"Press Enter to continue, 'back' to go back to the last step, or 'exit' to exit the instructions: ")
             else:

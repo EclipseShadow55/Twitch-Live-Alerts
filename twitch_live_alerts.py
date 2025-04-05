@@ -97,7 +97,10 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                 print(f"{datetime.now().strftime(format='%H:%M:%S.%f, %d/%m/%Y %Z')}\n\t{e}",
                       file=f,
                       end="\n\n")
-
+            winotify.Notification(title="LiveAlertDiscordBot Error",
+                                  msg=f"Error # {cons_errors}: {e}",
+                                  duration="long",
+                                  app_id="LiveAlertDiscordBot").show()
             if cons_errors < 10:
                 cons_errors += 1
                 sleep(120 * 2**cons_errors)
@@ -108,7 +111,6 @@ def main(path_to_data: str, path_to_channels: str, path_to_log: str, path_to_err
                                     app_id="LiveAlertDiscordBot").show()
                 raise Exception("Too many consecutive errors.") from e
         ignore = False
-
 if __name__ == "__main__":
     log_file = "Logs/log.txt"
     error_file = "Logs/errors.txt"
